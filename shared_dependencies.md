@@ -1,17 +1,13 @@
-1. Tkinter: This is the standard Python interface to the Tk GUI toolkit. All the pages will use this library to create the UI.
+1. "src/main.py": This file will import all the other modules and run the application. Shared dependencies include all the other modules.
 
-2. Page Navigation Functions: Functions like "go_to_page1()", "go_to_page2()", etc. will be shared across all files to navigate between the pages.
+2. "src/ui/page1.py", "src/ui/page2.py", "src/ui/page3.py", "src/ui/page4.py", "src/ui/page5.py": These files will share common UI components, styles, and layout. Shared dependencies might include "ui_components.py" for reusable UI elements, "styles.py" for common styles, and "layout.py" for layout settings. They will also share common DOM element ids such as "header", "footer", "main-content", etc.
 
-3. Shared Variables: Variables like "current_page" might be shared across all files to keep track of the current page.
+3. "src/api/api_integration.py": This file will handle API calls. Shared dependencies might include "api_config.py" for API configuration settings, and "api_utils.py" for utility functions related to API calls.
 
-4. Shared Styles: If there are any common styles or themes, they will be shared across all pages. This could include things like color schemes, fonts, etc.
+4. "src/chatroom/virtual_chatroom.py": This file will handle the chatroom functionality. Shared dependencies might include "chatroom_config.py" for chatroom configuration settings, "chatroom_utils.py" for utility functions related to the chatroom, and "message_schema.py" for the schema of chat messages.
 
-5. Shared Widgets: Common UI elements like buttons, labels, text fields, etc. will be shared across all pages.
+5. "src/chatroom/chatbot_training.py": This file will handle the training of the AI chatbot. Shared dependencies might include "chatbot_config.py" for chatbot configuration settings, "chatbot_utils.py" for utility functions related to the chatbot, and "training_data_schema.py" for the schema of the training data.
 
-6. Shared Data Schemas: If the pages are displaying or manipulating the same data, they will share the same data schemas.
+6. "src/backend/backend_integration.py": This file will handle the integration with the backend. Shared dependencies might include "backend_config.py" for backend configuration settings, and "backend_utils.py" for utility functions related to the backend.
 
-7. Message Names: If the pages communicate with each other or with a backend, they will share the same message names for sending and receiving data.
-
-8. DOM Element IDs: If the pages use JavaScript for any reason, they will share the same DOM element IDs for accessing and manipulating elements.
-
-9. Shared Libraries: Any other libraries that are used by all pages will be shared. This could include things like requests for making HTTP requests, or pandas for data manipulation.
+Common function names across these files might include "init()", "config()", "run()", "stop()", etc. Common message names might include "start", "stop", "error", "success", etc.
